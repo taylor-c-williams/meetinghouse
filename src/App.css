@@ -18,6 +18,11 @@ i {
 h1 {
   font-size: 2em;
   font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.05em;
+  text-decoration-color: lightgrey;
 }
 
 main {
@@ -31,10 +36,16 @@ main {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 2.5em;
-  font-weight: 700;
+  font-weight: 300;
   text-decoration: underline;
   text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.05em;
+  text-decoration-color: lightgrey;
 }
 
 section {
@@ -53,11 +64,15 @@ input {
 }
 
 fieldset {
-  padding: 35px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 35px;
+  border: 1px solid lightgrey;
 }
 
 legend {
   font-size: 2em;
+  text-align: center;
 }
 
 label {
@@ -71,10 +86,6 @@ label {
   padding: 0;
   font-family: 'Playfair Display', serif;
   font-style: italic;
-}
-
-.list {
-  margin: 50px;
 }
 
 span {
@@ -93,11 +104,20 @@ button {
   border: 1px black solid;
 }
 
+section .list {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ul {
-  font-size: 1.25em;
   list-style: none;
+  padding-left: 0;
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  font-size: 1em;
+  text-align: center;
 }
 
 li {

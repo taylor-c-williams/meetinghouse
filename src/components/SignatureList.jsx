@@ -13,7 +13,7 @@ export default function SignatureList() {
 
   return (
     <section className="list">
-      <h1>Neighbors in Support:</h1>
+      <h1>Neighbors in Support</h1>
       <ul>
         {signatures.map((signature) => {
           return (
