@@ -25,10 +25,15 @@ export async function updateSignatureById(
   return parseData(request);
 }
 
-export async function createSignature({ first_name, last_name, email }) {
+export async function createSignature({
+  first_name,
+  last_name,
+  email,
+  email_updates,
+}) {
   const request = await client
     .from('signatures')
-    .insert({ first_name, last_name, email });
+    .insert({ first_name, last_name, email, email_updates });
   return parseData(request);
 }
 

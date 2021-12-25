@@ -23,11 +23,10 @@ main {
   justify-content: center;
   align-items: center;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 
 header {
-  /* margin-bottom: 50px; */
   font-size: 2.2em;
   font-weight: 600;
   text-decoration: underline;
@@ -37,4 +36,61 @@ header {
 section {
   width: 75%;
   margin: 50px;
+}
+
+input {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Playfair Display', serif;
+}
+
+fieldset {
+  padding: 35px;
+}
+
+form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: left; */
+}
+
+legend {
+  font-size: 2em;
+}
+
+label {
+  margin-top: 20px;
+  display: block;
+  font-size: 1.2em;
+}
+
+::placeholder {
+  font-size: 0.85em;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.list {
+  margin: 50px;
+}
+
+span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+button {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Playfair Display', serif;
+  border: 1px black solid;
 }
