@@ -25,6 +25,7 @@ export default function SignUp() {
             type="text"
             pattern="^[a-zA-Z_ ]*$"
             placeholder="letters A-Z only, please"
+            required
             onChange={({ target }) => setFirst_name(target.value)}
           ></input>
           <label htmlFor="last_name">Last Name:</label>
@@ -34,6 +35,7 @@ export default function SignUp() {
             type="text"
             pattern="^[a-zA-Z]+$"
             placeholder="letters A-Z only, please"
+            required
             onChange={({ target }) => setLast_name(target.value)}
           ></input>
           <label htmlFor="email">E-mail Address:</label>
@@ -43,6 +45,7 @@ export default function SignUp() {
             type="text"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             placeholder="123@abc.com"
+            required
             onChange={({ target }) => setEmail(target.value)}
           ></input>
 

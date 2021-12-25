@@ -1,5 +1,13 @@
 import React from 'react';
+import styles from './header.module.css';
 
 export default function Header() {
-  return <header>Meetinghouse Security Petition</header>;
+  return (
+    <div>
+      <header>We Deserve a Safe Place to Live!</header>
+      <span className={styles.subhead}>
+        Petition for Meetinghouse On-Site Security
+      </span>
+    </div>
+  );
 }
