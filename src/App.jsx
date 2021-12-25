@@ -2,5 +2,9 @@ import Home from './views/Home.jsx';
 import './App.css';
 
 export default function App() {
-  return <Home />;
+  return (
+    <main>
+      <Home />
+    </main>
+  );
 }

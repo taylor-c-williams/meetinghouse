@@ -35,6 +35,14 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react',
     }),
+    // new webpack.DefinePlugin({
+    //   'process.env.REACT_APP_SUPABASE_URL': JSON.stringify(
+    //     process.env.REACT_APP_SUPABASE_URL
+    //   ),
+    //   'process.env.REACT_APP_SUPABASE_KEY': JSON.stringify(
+    //     process.env.REACT_APP_SUPABASE_KEY
+    //   ),
+    // }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
