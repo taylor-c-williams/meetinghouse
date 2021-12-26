@@ -1,8 +1,13 @@
-import React from 'react';
+import { useHistory } from 'react-router';
+import { useAuth } from '../context/Auth';
 
 export default function Dashboard() {
+  const { user, signOut } = useAuth();
+  const history = useHistory();
+
   async function handleSignOut() {
-    // sign out logic
+    await signOut();
+    history.push('/');
   }
 
   return (
