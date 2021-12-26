@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import { createSignature } from '../services/signatures';
 
@@ -12,7 +11,7 @@ export default function SignUp() {
     e.preventDefault();
     await createSignature({ first_name, last_name, email, email_updates });
   };
-  console.log(first_name, last_name, email, email_updates);
+  // console.log(first_name, last_name, email, email_updates);
   return (
     <div>
       <fieldset>

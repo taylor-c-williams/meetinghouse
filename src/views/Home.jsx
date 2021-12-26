@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Mission from '../components/Mission';
 import Sign from '../components/Sign';
@@ -13,6 +14,7 @@ export default function Home() {
       <Sign />
       <SignatureList />
       <Footer />
+      <Link to="/login">Log In</Link>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   const emailRef = useRef();
@@ -22,6 +23,9 @@ export default function SignUp() {
 
         <button type="submit">Sign Up</button>
       </form>
+      <p>
+        Already have an account? <Link to="/login">Log In</Link>
+      </p>
     </>
   );
 }
