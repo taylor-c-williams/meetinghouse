@@ -3,7 +3,7 @@ import React from 'react';
 export default function Mission() {
   return (
     <article>
-      <h2>To The Management of Meetinghouse Sellwood</h2>
+      <h2>To The Management of Meetinghouse Sellwood:</h2>
       <p>
         We, the residents of Meetinghouse Sellwood apartments formally demand
         the presence of on site security posted in the mailroom/entrance/parking

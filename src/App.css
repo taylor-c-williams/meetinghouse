@@ -38,7 +38,7 @@ main {
   justify-content: center;
   align-items: center;
   font-family: 'Playfair Display', serif;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 header {
@@ -55,14 +55,41 @@ header {
   text-decoration-color: lightgrey;
 }
 
-input {
-  display: block;
+footer {
+  margin-bottom: 50px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 10px;
-  font-size: 1em;
-  font-family: 'Playfair Display', serif;
+  font-size: 0.85em;
+}
+
+span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+section {
+  width: 75%;
+  margin: 50px;
+}
+
+section .list {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 75%;
+  margin: 50px;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 5px;
 }
 
 fieldset {
@@ -83,18 +110,21 @@ label {
   font-size: 1.2em;
 }
 
+input {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Playfair Display', serif;
+}
+
 ::placeholder {
   font-size: 0.85em;
   padding: 0;
   font-family: 'Playfair Display', serif;
   font-style: italic;
-}
-
-span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
 }
 
 button {
@@ -105,34 +135,12 @@ button {
   font-size: 1em;
   font-family: 'Playfair Display', serif;
   border: 1px black solid;
-  box-shadow: -3px -3px 0 black;
+  box-shadow: -3px -3px 0 lightgrey;
 }
 
 button:active {
   box-shadow: none;
   background-color: lightgrey;
-}
-
-section {
-  width: 75%;
-  margin: 50px;
-}
-
-article {
-  width: 75%;
-  margin: 50px;
-  padding: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgba(220, 236, 255, 0.5);
-  border-radius: 5px;
-}
-
-section .list {
-  margin: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 ul {
@@ -146,12 +154,4 @@ ul {
 
 li {
   padding: 10px;
-}
-
-footer {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.85em;
 }
