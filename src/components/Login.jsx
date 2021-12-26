@@ -1,13 +1,24 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import { useAuth } from '../context/Auth';
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const { signIn } = useAuth();
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    //  TODO add login logic
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    const { error } = await signIn({ email, password });
+
+    if (error) {
+      alert('error signing in');
+    } else {
+      history.push('/dashboard');
+    }
   }
 
   return (

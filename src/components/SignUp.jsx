@@ -12,6 +12,7 @@ export default function SignUp() {
     const password = passwordRef.current.value;
 
     // signUp function comes from context, not SignUp component
+    const { signUp } = useAuth();
     const { error } = await signUp({ email, password });
 
     if (error) {
