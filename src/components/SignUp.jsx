@@ -5,6 +5,8 @@ import { useAuth } from '../context/Auth';
 export default function SignUp() {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const history = useHistory();
+  const { signUp } = useAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -12,14 +14,15 @@ export default function SignUp() {
     const password = passwordRef.current.value;
 
     // signUp function comes from context, not SignUp component
-    const { signUp } = useAuth();
-    const { error } = await signUp({ email, password });
 
-    if (error) {
-      alert('error signing up');
-    } else {
-      history.push('/login');
-    }
+    // const { error } =
+    await signUp({ email, password });
+
+    // if (error) {
+    //   alert('error signing up');
+    // } else {
+    history.push('/login');
+    // }
   }
 
   return (
