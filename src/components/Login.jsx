@@ -25,7 +25,8 @@ export default function Login() {
       </form>
 
       <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        <br />
+        <Link to="/signup">Sign Up</Link> | <Link to="/">Back Home</Link>
       </p>
     </>
   );

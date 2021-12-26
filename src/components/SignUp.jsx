@@ -24,7 +24,8 @@ export default function SignUp() {
         <button type="submit">Sign Up</button>
       </form>
       <p>
-        Already have an account? <Link to="/login">Log In</Link>
+        <br />
+        <Link to="/login">Log In</Link> | <Link to="/">Back Home</Link>
       </p>
     </>
   );
