@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { client } from '../services/client';
+const AuthContext = React.createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState();
@@ -26,7 +27,6 @@ export function AuthProvider({ children }) {
   }, []);
 
   // Will be passed down to Signup, Login and Dashboard Components
-
   const value = {
     signUp: (data) => client.auth.signUp(data),
     signIn: (data) => client.auth.signIn(data),
@@ -39,4 +39,8 @@ export function AuthProvider({ children }) {
       {!loading && children}
     </AuthContext.Provider>
   );
+}
+
+export function useAuth() {
+  return useContext(AuthContext);
 }

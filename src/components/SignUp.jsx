@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import { useAuth } from '../context/Auth';
 
 export default function SignUp() {
   const emailRef = useRef();
@@ -7,7 +8,17 @@ export default function SignUp() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // @TODO: add sign up logic
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    // signUp function comes from context, not SignUp component
+    const { error } = await signUp({ email, password });
+
+    if (error) {
+      alert('error signing up');
+    } else {
+      history.push('/login');
+    }
   }
 
   return (
