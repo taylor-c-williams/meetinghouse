@@ -1,15 +1,36 @@
-import { useState } from 'react';
-import { createSignature } from '../services/signatures';
+import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { createSignature, getSignatures } from '../services/signatures';
 
 export default function SignUp() {
   const [first_name, setFirst_name] = useState('');
   const [last_name, setLast_name] = useState('');
   const [email, setEmail] = useState('');
   const [email_updates, setEmail_updates] = useState(false);
+  const [signatures, setSignatures] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const history = useHistory();
+
+  useEffect(() => {
+    getSignatures()
+      .then((res) => setSignatures(res))
+      .finally(() => setLoading(false));
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createSignature({ first_name, last_name, email, email_updates });
+    await createSignature({
+      first_name,
+      last_name,
+      email,
+      email_updates,
+    });
+    setFirst_name('');
+    setLast_name('');
+    setEmail('');
+    await getSignatures()
+      .then((res) => setSignatures(res))
+      .finally(() => history.push('/'));
   };
   // console.log(first_name, last_name, email, email_updates);
   return (
@@ -65,6 +86,19 @@ export default function SignUp() {
           </button>
         </form>
       </fieldset>
+
+      <section className="list">
+        <h1>Neighbors in Support</h1>
+        <ul>
+          {signatures.map((signature) => {
+            return (
+              <li key={signature.id}>
+                {signature.first_name} {signature.last_name}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </div>
   );
 }
