@@ -1,7 +1,10 @@
 import { client, parseData } from './client';
 
 export async function getSignatures() {
-  const request = await client.from('signatures_2').select().order('last_name');
+  const request = await client
+    .from('signatures_2')
+    .select()
+    .order('created_at');
   return parseData(request);
 }
 
