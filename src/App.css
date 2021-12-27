@@ -163,7 +163,7 @@ li {
   }
 
   header {
-    /* font-size: 1.5em; */
+    font-size: 2em;
   }
 
   h1 {
@@ -206,5 +206,10 @@ li {
   input {
     height: 20px;
     /* font-size: 0.5em; */
+  }
+
+  button {
+    font-size: 0.5em;
+    color: black;
   }
 }
