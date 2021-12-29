@@ -32,7 +32,7 @@ export default function SignUp() {
       .then((res) => setSignatures(res))
       .finally(() => history.push('/'));
   };
-  // console.log(first_name, last_name, email, email_updates);
+
   return (
     <div>
       <fieldset>
@@ -94,6 +94,7 @@ export default function SignUp() {
         <h1>Neighbors in Support</h1>
         <ul>
           {signatures.map((signature) => {
+            if (loading) return <span className="loading">Loading...</span>;
             return (
               <li key={signature.id}>
                 {signature.first_name} {signature.last_name}
